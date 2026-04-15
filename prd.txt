@@ -1,0 +1,371 @@
+# Vyrlo Landing Page — Product Requirements Document
+**For: Design Agent**
+**Version:** 1.0
+**Status:** Ready for implementation
+
+---
+
+## Overview
+
+A single-screen landing page for Vyrlo — an AI-powered UGC ad creation platform. The page is a direct-response funnel for users arriving from organic TikTok/Reels content. The goal is one action: join the Discord community.
+
+This page does not explain. It does not educate. It demonstrates and converts.
+
+---
+
+## Audience
+
+- Mobile-first (assume 70%+ mobile traffic)
+- Arriving from TikTok/Reels — already warmed up by video content
+- Low patience, fast scrollers, button-hunters
+- Personas: creator, small brand owner, agency worker, app owner
+- Below college reading level — every word must earn its place
+
+---
+
+## Layout Specification
+
+### Global Layout
+
+```
+┌─────────────────────────────────────┐
+│  [Logo]                    top-left  │  ← Fixed nav bar, minimal
+├─────────────────────────────────────┤
+│                                     │
+│  [HEADLINE BLOCK]     [UGC CONTENT] │  ← Two-column, left/right split
+│                                     │     Left: copy stack
+│                                     │     Right: 2 images + 1 video
+│                                     │
+├─────────────────────────────────────┤
+│        [ JOIN DISCORD ]             │  ← Single CTA, centered
+└─────────────────────────────────────┘
+```
+
+### Desktop (≥1024px)
+
+- Two-column layout: 50/50 split, vertically centered
+- Left column: Logo (top), Headline stack
+- Right column: UGC content cluster (2 images + 1 video in 9:16 frames)
+- CTA pinned to bottom, full-width centered
+
+### Mobile (< 768px)
+
+- Single column, stacked:
+  1. Logo (top-left)
+  2. Headline block
+  3. UGC content row (horizontal scroll or stacked)
+  4. Join Discord CTA (sticky bottom or large centered button)
+
+---
+
+## Section-by-Section Spec
+
+---
+
+### Section 1: Navigation Bar
+
+**Position:** Fixed top, full width
+**Height:** 56px desktop / 48px mobile
+**Background:** `#0A0A0A` with a 1px bottom border in `rgba(255,255,255,0.08)`
+
+**Elements:**
+- Logo: Wordmark "Vyrlo" in Space Grotesk Bold, white
+  - The letter "y" rendered in `#00FF85` (green accent)
+  - Left-aligned with 32px padding from left edge
+- No nav links. No hamburger menu. Logo only.
+
+**Behaviour:** Fixed on scroll. Always visible.
+
+---
+
+### Section 2: Hero — Left Column (Headline Block)
+
+**Position:** Left half of viewport, vertically centered
+**Padding:** 48px left, 32px top/bottom
+
+**Headline (Primary)**
+- Text: `Unlimited UGC.`
+- Font: Space Grotesk Bold
+- Size: 72px desktop / 48px mobile
+- Color: `#FFFFFF`
+- Line height: 1.0
+- The word `UGC` rendered with green underline or green text
+
+**Headline (Secondary)**
+- Text: `Instant.`
+- Font: Space Grotesk Bold
+- Size: 72px desktop / 48px mobile
+- Color: `#00FF85` (full green)
+- Line height: 1.0
+
+**Subheadline**
+- Text: `Turn any product into a scroll-stopping ad in seconds.`
+- Font: Inter Regular
+- Size: 18px desktop / 16px mobile
+- Color: `#888888` (muted)
+- Max width: 420px
+- Margin top: 24px
+
+**Social proof micro-line** (below subheadline)
+- Text: `500+ brands already scaling with Vyrlo`
+- Font: Inter Regular
+- Size: 14px
+- Color: `#888888`
+- Prepended with a green dot indicator: `● ` in `#00FF85`
+- Margin top: 16px
+
+---
+
+### Section 3: Hero — Right Column (UGC Content Cluster)
+
+**Position:** Right half of viewport
+**Purpose:** Show real UGC ad content in 9:16 format. Currently placeholders.
+**Frame ratio:** All content frames must maintain **9:16 aspect ratio** strictly
+
+**Content layout — 3 frames:**
+
+```
+┌───────┐  ┌───────┐
+│       │  │       │
+│ IMG 1 │  │ VIDEO │
+│       │  │       │
+│ 9:16  │  │  9:16 │
+└───────┘  └───────┘
+    ┌───────┐
+    │       │
+    │ IMG 2 │
+    │       │
+    │ 9:16  │
+    └───────┘
+```
+
+**Arrangement:**
+- Desktop: Staggered asymmetric cluster — not a straight grid
+  - Frame 1 (image): top-left of cluster, slightly rotated -2deg
+  - Frame 2 (video): top-right, slightly larger, no rotation
+  - Frame 3 (image): bottom-center, slightly rotated +1.5deg, partially behind frame 2
+- Mobile: Horizontal scroll row, equal sizes, no rotation
+
+**Frame dimensions (desktop):**
+- Image frames: ~180px wide (maintaining 9:16)
+- Video frame: ~210px wide (slightly larger, dominant element)
+
+**Placeholder treatment:**
+- Background: `#1A1A1A`
+- Border: 1px solid `rgba(255,255,255,0.1)`
+- Border radius: 12px
+- Inner label (centered): Icon + text
+  - Image frames: camera icon + `"UGC Image"` in muted gray
+  - Video frame: play icon + `"UGC Video"` in muted gray
+- Label font: Inter, 12px, `#444444`
+
+**Decorative detail:**
+- Thin green glow/border on the video frame only: `box-shadow: 0 0 20px rgba(0,255,133,0.15)`
+- This makes the video the focal point
+
+---
+
+### Section 4: CTA — Join Discord
+
+**Position:** Centered, bottom of page. On desktop this sits at the bottom of the viewport or as the final scroll stop.
+
+**Button spec:**
+- Text: `Join the Community →`
+- Font: Space Grotesk Bold
+- Size: 18px
+- Background: `#00FF85`
+- Text color: `#0A0A0A` (dark — never white on green)
+- Padding: 20px 48px
+- Border radius: 6px (sharp-ish, not bubbly)
+- Width: auto (not full-width)
+- Min width: 280px
+
+**Button states:**
+- Default: as above
+- Hover: background `#00E876`, slight scale `transform: scale(1.03)`, transition 150ms ease
+- Active: scale `0.98`
+
+**Supporting text above button:**
+- Text: `Free to join. No credit card.`
+- Font: Inter Regular
+- Size: 13px
+- Color: `#444444`
+- Margin bottom: 12px
+
+**Behaviour:**
+- Clicking opens Discord invite link in new tab
+- On mobile: button is sticky to bottom of viewport with 16px padding and full-width treatment
+
+---
+
+## Visual Design System
+
+### Colors
+
+| Token | Value | Usage |
+|---|---|---|
+| `--bg` | `#0A0A0A` | Page background, all surfaces |
+| `--accent` | `#00FF85` | CTAs, key numbers, green highlights, logo "y" |
+| `--text-primary` | `#FFFFFF` | Headlines, main copy |
+| `--text-muted` | `#888888` | Subheadlines, secondary text |
+| `--text-dim` | `#444444` | Tertiary labels, placeholders |
+| `--border` | `rgba(255,255,255,0.08)` | Subtle borders, dividers |
+| `--card-bg` | `#1A1A1A` | Placeholder frames, cards |
+
+### Typography
+
+| Token | Font | Weight | Usage |
+|---|---|---|---|
+| `--font-display` | Space Grotesk | 700 | All headlines, logo, CTA button |
+| `--font-body` | Inter | 400 | Subheadlines, body copy, labels |
+
+**Load via Google Fonts:**
+```html
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
+```
+
+### Spacing Scale
+
+- 4px base unit
+- Common values: 8, 12, 16, 24, 32, 48, 64
+
+### Borders & Radius
+
+- Cards/frames: `border-radius: 12px`
+- Buttons: `border-radius: 6px`
+- Nav: `border-radius: 0`
+
+### No Gradients Rule
+
+Per brand bible: no gradients except `green to transparent` for glow effects only.
+
+The one permitted gradient: on the video frame, a faint radial glow — `radial-gradient(ellipse at center, rgba(0,255,133,0.06) 0%, transparent 70%)` as a background overlay.
+
+---
+
+## Animations & Motion
+
+### Page Load Sequence (staggered)
+
+All elements start `opacity: 0, transform: translateY(16px)` and animate in sequentially:
+
+| Element | Delay | Duration | Easing |
+|---|---|---|---|
+| Logo | 0ms | 400ms | ease-out |
+| Headline line 1 | 100ms | 500ms | ease-out |
+| Headline line 2 | 200ms | 500ms | ease-out |
+| Subheadline | 350ms | 400ms | ease-out |
+| Social proof line | 450ms | 400ms | ease-out |
+| UGC frame 1 | 300ms | 600ms | ease-out |
+| UGC frame 2 | 450ms | 600ms | ease-out |
+| UGC frame 3 | 550ms | 600ms | ease-out |
+| CTA block | 600ms | 400ms | ease-out |
+
+### Hover Interactions
+
+- UGC frames: `transform: scale(1.02)` on hover, `transition: 200ms ease`, slight rotation normalises toward 0deg
+- CTA button: scale + background lighten (see CTA spec above)
+
+### Reduced Motion
+
+Wrap all animation in:
+```css
+@media (prefers-reduced-motion: no-preference) {
+  /* animations here */
+}
+```
+
+---
+
+## Accessibility
+
+- All images must have descriptive `alt` text (even placeholders: `alt="UGC ad example"`)
+- CTA button must have `aria-label="Join the Vyrlo Discord community"`
+- Color contrast: white on `#0A0A0A` passes WCAG AA; `#0A0A0A` on `#00FF85` passes WCAG AA
+- Focus states on all interactive elements: `outline: 2px solid #00FF85`
+
+---
+
+## Implementation Notes for the Agent
+
+### File structure
+
+Single-file HTML is acceptable for this page:
+```
+index.html   ← all HTML, CSS, JS inline or in <style>/<script> tags
+```
+
+### Responsive breakpoints
+
+```css
+/* Mobile first */
+/* Base styles: mobile */
+
+@media (min-width: 768px) { /* tablet */ }
+@media (min-width: 1024px) { /* desktop */ }
+```
+
+### UGC placeholder component
+
+Implement as a reusable component/function that accepts:
+- `type`: `"image"` or `"video"`
+- `size`: `"sm"` | `"md"` | `"lg"` (maps to frame widths)
+
+```html
+<!-- Example placeholder frame -->
+<div class="ugc-frame ugc-frame--video">
+  <div class="ugc-frame__inner">
+    <span class="ugc-frame__icon">▶</span>
+    <span class="ugc-frame__label">UGC Video</span>
+  </div>
+</div>
+```
+
+Frame must always maintain 9:16 via:
+```css
+.ugc-frame {
+  aspect-ratio: 9 / 16;
+}
+```
+
+### Discord link
+
+Placeholder: `href="https://discord.gg/INVITE_CODE"` — replace with live link before deploy.
+
+---
+
+## What This Page Must NOT Have
+
+Per brand bible and anti-pattern analysis:
+
+- ❌ No navigation links (no "Pricing", "About", "Features" etc.)
+- ❌ No hero image (stock photo, lifestyle photo, etc.)
+- ❌ No gradient backgrounds (green glow only exception)
+- ❌ No paragraph copy — max 1 sentence at a time
+- ❌ No more than one CTA
+- ❌ No form fields on this page (join via Discord link only)
+- ❌ No light/white backgrounds
+- ❌ No rounded bubbly UI elements
+- ❌ No animations that auto-play video with sound
+- ❌ No footer (this is a funnel page, not a marketing site)
+
+---
+
+## Success Criteria
+
+The page is complete when:
+
+1. ✅ Renders correctly on iPhone 14 Pro viewport (390×844)
+2. ✅ Renders correctly on 1440px desktop
+3. ✅ Logo visible top-left with green "y" on load
+4. ✅ Two-column layout on desktop, single-column on mobile
+5. ✅ All 3 UGC frames visible and maintain 9:16 ratio
+6. ✅ Staggered load animation plays on first visit
+7. ✅ CTA button visible without scrolling on mobile (sticky)
+8. ✅ Clicking CTA opens Discord link
+9. ✅ No content overflows viewport horizontally
+10. ✅ Page passes Lighthouse accessibility score ≥ 90
+
+---
+
+*End of PRD — v1.0*
