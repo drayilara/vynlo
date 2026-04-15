@@ -19,6 +19,20 @@ export const metadata: Metadata = {
   title: "Vynlo — Create Unlimited UGC Ads. Instantly.",
   description:
     "Turn any product into a scroll-stopping UGC ad in seconds. Join 500+ brands already scaling with Vynlo.",
+  openGraph: {
+    title: "Vynlo — Create Unlimited UGC Ads. Instantly.",
+    description:
+      "Turn any product into a scroll-stopping UGC ad in seconds. Join 500+ brands already scaling with Vynlo.",
+    siteName: "Vynlo",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vynlo — Create Unlimited UGC Ads. Instantly.",
+    description:
+      "Turn any product into a scroll-stopping UGC ad in seconds. Join 500+ brands already scaling with Vynlo.",
+  },
 };
 
 export default function RootLayout({
