@@ -57,14 +57,14 @@ export default function Home() {
                 <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight tracking-tight leading-[1.0]">
                   Create unlimited{" "}
                   <span className="text-accent underline decoration-4 underline-offset-8">
-                    UGC Ads.
+                    UGC creatives.
                   </span>
                   <br />
-                  <span className="text-accent">Instantly.</span>
+                  <span className="text-accent">Fast.</span>
                 </h1>
                 <p className="text-on-surface-variant text-lg md:text-xl font-body max-w-lg leading-relaxed">
                   Turn any product into a scroll-stopping ad in seconds. Our
-                  AI-powered engine crafts authentic high-performance creative at
+                  AI-powered engine crafts authentic high-performance creatives at
                   scale.
                 </p>
               </div>
@@ -107,12 +107,12 @@ export default function Home() {
                 {/* Staggered Frames */}
                 <div className="flex items-center justify-center w-full relative">
                   {/* Frame 1 (Left) */}
-                  <div className="absolute left-0 w-1/2 aspect-[9/16] bg-surface-container-high rounded-xl overflow-hidden -rotate-6 z-10 border border-white/5 shadow-2xl">
+                  <div className="absolute -left-10 w-1/2 aspect-[9/16] bg-surface-container-high rounded-xl overflow-hidden -rotate-6 z-10 border border-white/5 shadow-2xl">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       className="w-full h-full object-cover opacity-80"
-                      alt="Aesthetic product shot of white wireless headphones"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIhyGqKkQQemVKt0r4c1_lpw3sYmCPmvs9RYmzqrno4R0j7BsT4Bzb7hvI1Ew8162c3R0x8WzhygOiP-K4CYVrbBe6XDLQex2JcHaNqaGKHNrYXU-WOMd5tCYWZPEYp4TgZK0h_wjpjZ7ITdPH3H5DUdwQ_3VpaLS6pNLHdVRQuK1idAHRnu5ur0V7TP6VfZ_MlNS1jgErXxJe34utuJL5FKPT4x41IWEOn9LuwKHSZZ8ACi_CMuOPvMGmLYBy6-EiQspaA_Eew08y"
+                      alt="Product showcase"
+                      src="/landing_page_product.jpg"
                     />
                   </div>
                   {/* Frame 2 (Center, Active) */}
@@ -140,12 +140,12 @@ export default function Home() {
                     </div>
                   </div>
                   {/* Frame 3 (Right) */}
-                  <div className="absolute right-0 w-1/2 aspect-[9/16] bg-surface-container-high rounded-xl overflow-hidden rotate-6 z-10 border border-white/5 shadow-2xl">
+                  <div className="absolute -right-10 w-1/2 aspect-[9/16] bg-surface-container-high rounded-xl overflow-hidden rotate-6 z-10 border border-white/5 shadow-2xl">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       className="w-full h-full object-cover opacity-80"
-                      alt="Young creator unboxing a skincare product"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2tMKundspG2tAi3WraxAeOF2hZrZP-jNwQ9UloEbEltm-xpTErVQaJdHOcuY4XE39wWkxQ_YEZRyU3HmiRv5_oH2lUT2zg33NG1IkkF76JwS5jgwPBI1bei4_Cf9BOjSx7XuXPkuWNAQ_HVdr_A53k6s1t4ZXUsK-MMc9DKiuhCyP0XksQWR6BXa8DPLeCjiYlUge1UNTTP6OXKtZmHzRmh8bG-jujRfF4So0mJF7iFJUkx2KocBj2_sJSPi4fwBcCcxOwL7macJb"
+                      alt="Model side portrait"
+                      src="/landing_model_side.jpeg"
                     />
                   </div>
                 </div>
