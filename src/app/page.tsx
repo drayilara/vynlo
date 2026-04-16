@@ -7,10 +7,25 @@ const DISCORD_LINK = "https://discord.gg/aG3rdPuV";
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const muteIconRef = useRef<HTMLSpanElement>(null);
+  const videoRef2 = useRef<HTMLVideoElement>(null);
+  const muteIconRef2 = useRef<HTMLSpanElement>(null);
 
   function toggleMute() {
     const video = videoRef.current;
     const icon = muteIconRef.current;
+    if (!video || !icon) return;
+    if (video.muted) {
+      video.muted = false;
+      icon.textContent = "volume_up";
+    } else {
+      video.muted = true;
+      icon.textContent = "volume_off";
+    }
+  }
+
+  function toggleMute2() {
+    const video = videoRef2.current;
+    const icon = muteIconRef2.current;
     if (!video || !icon) return;
     if (video.muted) {
       video.muted = false;
@@ -156,7 +171,7 @@ export default function Home() {
 
         {/* Featured UGC Highlight Section */}
         <section className="w-full bg-[#0A0A0A] py-20 md:py-32">
-          <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
+          <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-8">
             <div className="relative w-full max-w-[320px] aspect-[9/16] rounded-[12px] border border-white/10 featured-video-shadow">
               <div className="w-full h-full rounded-[12px] overflow-hidden bg-surface-container">
               <video
@@ -181,6 +196,46 @@ export default function Home() {
               >
                 <span
                   ref={muteIconRef}
+                  className="material-symbols-outlined text-xl"
+                >
+                  volume_off
+                </span>
+              </button>
+              {/* Status Badge */}
+              <div className="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-[#00FF85]/10 border border-[#00FF85]/20 backdrop-blur-md">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00FF85] animate-pulse" />
+                  <span className="text-[10px] font-bold text-[#00FF85] uppercase tracking-wider">
+                    Live UGC Ad
+                  </span>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div className="relative w-full max-w-[320px] aspect-[9/16] rounded-[12px] border border-white/10 featured-video-shadow">
+              <div className="w-full h-full rounded-[12px] overflow-hidden bg-surface-container">
+              <video
+                ref={videoRef2}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source
+                  src="https://gohzjlehzwgusqsebigj.supabase.co/storage/v1/object/public/app-videos/Boyfriend%20perfume%20test%20ad.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              {/* Video Overlay Controls */}
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              <button
+                className="absolute bottom-4 right-4 z-20 w-10 h-10 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:bg-black/60 transition-all active:scale-90 pointer-events-auto"
+                onClick={toggleMute2}
+                title="Toggle Mute"
+              >
+                <span
+                  ref={muteIconRef2}
                   className="material-symbols-outlined text-xl"
                 >
                   volume_off
