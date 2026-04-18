@@ -223,7 +223,7 @@ export default function Home() {
                 className="w-full h-full object-cover"
               >
                 <source
-                  src="https://gohzjlehzwgusqsebigj.supabase.co/storage/v1/object/public/app-videos/Boyfriend%20perfume%20test%20ad.mp4"
+                  src="https://gohzjlehzwgusqsebigj.supabase.co/storage/v1/object/public/app-videos/vynlo%20podcast%20full%20edit.mp4"
                   type="video/mp4"
                 />
               </video>
