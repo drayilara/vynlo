@@ -57,7 +57,7 @@ export default function Home() {
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.196.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
             </svg>
-            Join the Community
+            Join Community
           </a>
         </div>
       </nav>
@@ -68,48 +68,58 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-16 md:py-12">
             {/* Left Content */}
             <div className="w-full md:w-1/2 flex flex-col space-y-8 order-2 md:order-1">
+              <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight tracking-tight leading-[1.0]">
+                Stop overpaying for{" "}
+                <span className="text-accent underline decoration-4 underline-offset-8">
+                  ad creatives.
+                </span>
+              </h1>
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight tracking-tight leading-[1.0]">
-                  Create unlimited{" "}
-                  <span className="text-accent underline decoration-4 underline-offset-8">
-                    UGC creatives.
-                  </span>
-                  <br />
-                  <span className="text-accent">Fast.</span>
-                </h1>
                 <p className="text-on-surface-variant text-lg md:text-xl font-body max-w-lg leading-relaxed">
-                  Turn any product into a scroll-stopping ad in seconds. Our
-                  AI-powered engine crafts authentic high-performance creatives at
-                  scale.
+                  Vynlo AI turns any product into scroll-stopping ads in seconds
+                  — no experience needed, no complicated tools, just results.
                 </p>
+                <a
+                  href={DISCORD_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#00FF85] text-[#003919] px-8 py-3 rounded-lg text-base font-bold scale-95 active:scale-90 transition-transform hover:opacity-90 w-fit inline-flex items-center gap-2"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.196.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+                  </svg>
+                  Join Community
+                </a>
               </div>
-              <div className="flex flex-col gap-6">
-                <div className="flex items-center gap-3">
-                  <div className="flex -space-x-3">
-                    <div className="w-10 h-10 rounded-full border-2 border-[#0A0A0A] overflow-hidden">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        className="w-full h-full object-cover"
-                        alt="Portrait of a young smiling professional woman"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuABRYMAjOFp3jpVrfgkp_x84jGuNnWxLumMwyjjyY-hqL55jDFpXFMFcOdToGV2bqDTTovJ2iu52ejZA9Jo_u9rWr-_Ys-b6ddvi9vzbtUk8o3NRFNEyuUoDJgA-duUQ5zo6Iyo-xjl34duzoGoMWt71qF_pgsvs_VcMiS4Fop8Y8CvQba76TvNP-OsZChf81NEMO-KbhUs8ytkyuGzW8cch42HuYL2sTFGpPw7davzFyi15ONArOmWDT9oZ_kYWpEPfbOSVWNwOR2B"
-                      />
-                    </div>
-                    <div className="w-10 h-10 rounded-full border-2 border-[#0A0A0A] overflow-hidden">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        className="w-full h-full object-cover"
-                        alt="Headshot of a young creative man"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNa79Klm93wWbhcSb-pnXu5VmsbELrlZz0hYKJib0W4sspDM-xq4W8wFWX-EOFSAF_lta9lr6uhig0HET6TT4dGwua5ezeQs9RqnzgVHQKYXIrM02lY-CAosfD-CB_maXnzrvusdfc7j1J4mVd7qEz5XxhS8mx5qWW7vLpb7eMdAEJ8FhS4jshpSOM9H2kuE6Rdjz7s0shr04wr5308zTKyrAZOELQH4eSlOmxaxHLn2xXbS1LfzIE-uVbYFRe1fdGdx0YnuNrHeQ3"
-                      />
-                    </div>
-                    <div className="h-10 px-3 rounded-xl border-2 border-[#0A0A0A] bg-[#2a2a2a] flex items-center justify-center text-xs font-bold">
-                      +500
-                    </div>
-                  </div>
-                  <span className="text-sm font-label uppercase tracking-widest text-neutral-400">
-                    <span className="text-accent">●</span> 500+ brands already
-                    scaling with Vynlo
-                  </span>
+              <div className="space-y-3">
+                <span className="text-sm font-display font-bold uppercase tracking-widest text-neutral-400">
+                  Built for:
+                </span>
+                <div className="space-y-2 text-on-surface-variant text-sm md:text-base font-body leading-relaxed max-w-lg">
+                  <p>
+                    <span className="material-symbols-outlined text-accent text-base align-middle">check</span>{" "}
+                    <span className="font-bold text-white">Small business owners</span> — make
+                    professional ads yourself without hiring anyone or learning
+                    complicated tools
+                  </p>
+                  <p>
+                    <span className="material-symbols-outlined text-accent text-base align-middle">check</span>{" "}
+                    <span className="font-bold text-white">Ecommerce sellers</span> — turn your
+                    products into high-converting ads that actually stop the
+                    scroll and drive sales
+                  </p>
+                  <p>
+                    <span className="material-symbols-outlined text-accent text-base align-middle">check</span>{" "}
+                    <span className="font-bold text-white">Content creators</span> — monetise
+                    your audience faster by producing brand ad content without
+                    expensive equipment
+                  </p>
+                  <p>
+                    <span className="material-symbols-outlined text-accent text-base align-middle">check</span>{" "}
+                    <span className="font-bold text-white">Marketing agencies</span> — deliver
+                    more ad creatives to more clients without increasing your
+                    team or production costs
+                  </p>
                 </div>
               </div>
             </div>
@@ -278,7 +288,7 @@ export default function Home() {
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.196.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
                   </svg>
-                  Join the Community
+                  Join Community
                   <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
                     arrow_forward
                   </span>
@@ -303,7 +313,7 @@ export default function Home() {
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.196.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
           </svg>
-          Join the Community
+          Join Community
           <span className="material-symbols-outlined">arrow_forward</span>
         </a>
       </div>
